@@ -256,7 +256,7 @@ public class PlayerController : MonoBehaviour {
             case "Triangle":
                 this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 this.transform.eulerAngles = new Vector3(0, 0, 0);
-                this.rigidBody.gravityScale = -0.3f;
+                this.rigidBody.gravityScale = -0.45f;
                 this.rigidBody.mass = 5;
                 break;
         }
@@ -382,7 +382,8 @@ public class PlayerController : MonoBehaviour {
 
         if (config.shouldChangeDir)
         {
-            this.currentDirection *= -1;
+            this.currentDirection = -1;
+
         }
 
         if (config.isThereDestroyable)
